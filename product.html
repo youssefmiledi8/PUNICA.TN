@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produit — PUNICA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="siteHeader" class="scrolled">
+  <nav>
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="20.4" stroke="currentColor" stroke-width="1.3"/>
+        <g stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+          <line x1="22" y1="12.5" x2="22" y2="8.5"/>
+          <line x1="18.6" y1="13.2" x2="16.2" y2="9.6"/>
+          <line x1="25.4" y1="13.2" x2="27.8" y2="9.6"/>
+        </g>
+        <text x="22" y="31.5" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="19" fill="currentColor">P</text>
+      </svg>
+      <span class="logo-word">PUNICA<span>Tunis, depuis la côte</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="shop.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7V5.5A3 3 0 0 1 12 2.5a3 3 0 0 1 3 3V7"/></svg>Boutique</a>
+      <a href="index.html#collections"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/></svg>Collections</a>
+      <a href="index.html#heritage"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V11a8 8 0 0 1 16 0v9"/><line x1="4" y1="20" x2="20" y2="20"/></svg>Héritage</a>
+      <a href="index.html#contact"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5 12 13 21 6.5"/></svg>Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-wrap">
+        <button type="button" class="icon-btn" id="searchToggle" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+        </button>
+        <form class="search-form" id="searchForm">
+          <input type="text" id="searchInput" placeholder="Rechercher...">
+          <button type="submit">OK</button>
+        </form>
+      </div>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7V5.5A3 3 0 0 1 12 2.5a3 3 0 0 1 3 3V7"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="shop.html" class="btn">Voir les nouveautés</a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+</header>
+
+<section class="product-detail wrap" id="productDetail"></section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:1px solid rgba(173,223,241,0.16); padding-top:26px;">
+      <span>© 2026 PUNICA. Tous droits réservés.</span>
+      <span>Fait sur la côte.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 12 || true));
+
+  const burger = document.getElementById('burger');
+  const navLinks = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    const open = navLinks.style.display === 'flex';
+    navLinks.style.display = open ? 'none' : 'flex';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '64px';
+    navLinks.style.left = '0';
+    navLinks.style.right = '0';
+    navLinks.style.background = 'var(--cream)';
+    navLinks.style.padding = '20px 32px';
+    navLinks.style.gap = '18px';
+    navLinks.style.borderBottom = '1px solid var(--line)';
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('id');
+  const product = PUNICA_PRODUCTS.find(p => p.id === productId) || PUNICA_PRODUCTS[0];
+  const detail = document.getElementById('productDetail');
+
+  detail.innerHTML = `
+    <div class="pd-gallery">
+      <div class="pd-shot">
+        <span class="tag">Recto</span>
+        <img src="${product.image}" alt="${product.name} — face">
+      </div>
+      <div class="pd-shot">
+        <span class="tag">Verso</span>
+        <img src="${product.image}" alt="${product.name} — dos">
+      </div>
+    </div>
+    <div class="pd-info">
+      <div class="eyebrow">${product.tag}</div>
+      <h1>${product.name}</h1>
+      <p class="pd-price">${product.price} DT</p>
+      <p class="pd-desc">${product.desc}</p>
+
+      <div class="pd-size">
+        <span>Taille</span>
+        <div class="pd-size-options">
+          <button>S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+        </div>
+      </div>
+      <p class="pd-error" id="pdError">Merci de choisir une taille avant d'ajouter au panier.</p>
+
+      <div class="pd-qty">
+        <span>Quantité</span>
+        <div class="qty-control">
+          <button id="pdDec">−</button>
+          <span id="pdQty">1</span>
+          <button id="pdInc">+</button>
+        </div>
+      </div>
+
+      <button class="btn" id="pdAdd" style="width:100%; margin-top:8px;">Ajouter au panier</button>
+      <a href="shop.html" class="hero-link" style="display:block; margin-top:18px;">← Retour à la boutique</a>
+    </div>
+  `;
+
+  let qty = 1;
+  const qtyLabel = document.getElementById('pdQty');
+  document.getElementById('pdInc').addEventListener('click', () => { qty++; qtyLabel.textContent = qty; });
+  document.getElementById('pdDec').addEventListener('click', () => { qty = Math.max(1, qty - 1); qtyLabel.textContent = qty; });
+
+  const searchToggle = document.getElementById('searchToggle');
+  const searchForm = document.getElementById('searchForm');
+  searchToggle.addEventListener('click', () => {
+    searchForm.classList.toggle('open');
+    if (searchForm.classList.contains('open')) document.getElementById('searchInput').focus();
+  });
+  searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const q = document.getElementById('searchInput').value.trim();
+    if (q) window.location.href = 'shop.html?q=' + encodeURIComponent(q);
+  });
+
+  let selectedSize = null;
+  const pdError = document.getElementById('pdError');
+  document.querySelectorAll('.pd-size-options button').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.pd-size-options button').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      selectedSize = b.textContent;
+      pdError.classList.remove('show');
+    });
+  });
+
+  document.getElementById('pdAdd').addEventListener('click', (e) => {
+    if (!selectedSize) {
+      pdError.classList.add('show');
+      document.querySelectorAll('.pd-size-options button').forEach(b => {
+        b.classList.add('error-shake');
+        setTimeout(() => b.classList.remove('error-shake'), 350);
+      });
+      return;
+    }
+    for (let i = 0; i < qty; i++) addToCart(product.id, selectedSize);
+    e.target.textContent = 'Ajouté ✓';
+    setTimeout(() => { e.target.textContent = 'Ajouter au panier'; }, 1200);
+  });
+</script>
+
+</body>
+</html>

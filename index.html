@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PUNICA — Venu de Carthage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="20.4" stroke="currentColor" stroke-width="1.3"/>
+        <g stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+          <line x1="22" y1="12.5" x2="22" y2="8.5"/>
+          <line x1="18.6" y1="13.2" x2="16.2" y2="9.6"/>
+          <line x1="25.4" y1="13.2" x2="27.8" y2="9.6"/>
+        </g>
+        <text x="22" y="31.5" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="19" fill="currentColor">P</text>
+      </svg>
+      <span class="logo-word">PUNICA<span>Tunis, depuis la côte</span></span>
+    </a>
+
+    <div class="nav-links">
+      <a href="shop.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7V5.5A3 3 0 0 1 12 2.5a3 3 0 0 1 3 3V7"/></svg>Boutique</a>
+      <a href="#collections"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/></svg>Collections</a>
+      <a href="#heritage"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V11a8 8 0 0 1 16 0v9"/><line x1="4" y1="20" x2="20" y2="20"/></svg>Héritage</a>
+      <a href="#contact"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5 12 13 21 6.5"/></svg>Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-wrap">
+        <button type="button" class="icon-btn" id="searchToggle" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+        </button>
+        <form class="search-form" id="searchForm">
+          <input type="text" id="searchInput" placeholder="Rechercher...">
+          <button type="submit">OK</button>
+        </form>
+      </div>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7V5.5A3 3 0 0 1 12 2.5a3 3 0 0 1 3 3V7"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="shop.html" class="btn">Voir les nouveautés</a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Tunis — fondée sur la côte</div>
+    <h1>Venu de<br>Carthage, taillé<br>pour <em>aujourd'hui</em>.</h1>
+    <p class="lead">Le nom vient de la grenade — simple dehors, réfléchi dedans. Lin et coton en petites séries, coupés et cousus à Tunis.</p>
+    <div class="hero-actions">
+      <a href="shop.html" class="btn">Voir la collection</a>
+      <a href="#heritage" class="hero-link">Lire notre histoire →</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <svg viewBox="0 0 480 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ADDFF1"/>
+          <stop offset="1" stop-color="#e9f7fc"/>
+        </linearGradient>
+        <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0a4468"/>
+          <stop offset="1" stop-color="#003152"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="480" height="500" rx="6" fill="url(#skyGrad)"/>
+      <rect x="0" y="330" width="480" height="170" fill="url(#seaGrad)"/>
+      <g fill="#003152">
+        <path d="M60 330 V230 a40 40 0 0 1 80 0 V330 Z"/>
+        <path d="M200 330 V180 a58 58 0 0 1 116 0 V330 Z"/>
+        <path d="M360 330 V245 a34 34 0 0 1 68 0 V330 Z"/>
+      </g>
+      <g fill="#ADDFF1">
+        <path d="M76 330 V232 a24 24 0 0 1 48 0 V330 Z"/>
+        <path d="M222 330 V182 a36 36 0 0 1 72 0 V330 Z"/>
+        <path d="M372 330 V248 a20 20 0 0 1 40 0 V330 Z"/>
+      </g>
+      <g>
+        <circle cx="392" cy="90" r="5.5" fill="#003152"/>
+        <circle cx="405" cy="100" r="5.5" fill="#003152" opacity="0.75"/>
+        <circle cx="382" cy="103" r="5.5" fill="#003152" opacity="0.55"/>
+        <circle cx="398" cy="112" r="5.5" fill="#003152" opacity="0.4"/>
+      </g>
+      <circle cx="60" cy="70" r="26" fill="#faf7f2" opacity="0.9"/>
+    </svg>
+  </div>
+</section>
+
+<svg class="arch-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="currentColor" stroke-width="1">
+    <path d="M0,40 V20 A20,20 0 0 1 40,20 V40" />
+    <path d="M40,40 V20 A20,20 0 0 1 80,20 V40" />
+    <path d="M80,40 V20 A20,20 0 0 1 120,20 V40" />
+    <path d="M120,40 V20 A20,20 0 0 1 160,20 V40" />
+    <path d="M160,40 V20 A20,20 0 0 1 200,20 V40" />
+    <path d="M200,40 V20 A20,20 0 0 1 240,20 V40" />
+    <path d="M240,40 V20 A20,20 0 0 1 280,20 V40" />
+    <path d="M280,40 V20 A20,20 0 0 1 320,20 V40" />
+    <path d="M320,40 V20 A20,20 0 0 1 360,20 V40" />
+    <path d="M360,40 V20 A20,20 0 0 1 400,20 V40" />
+    <path d="M400,40 V20 A20,20 0 0 1 440,20 V40" />
+    <path d="M440,40 V20 A20,20 0 0 1 480,20 V40" />
+    <path d="M480,40 V20 A20,20 0 0 1 520,20 V40" />
+    <path d="M520,40 V20 A20,20 0 0 1 560,20 V40" />
+    <path d="M560,40 V20 A20,20 0 0 1 600,20 V40" />
+    <path d="M600,40 V20 A20,20 0 0 1 640,20 V40" />
+    <path d="M640,40 V20 A20,20 0 0 1 680,20 V40" />
+    <path d="M680,40 V20 A20,20 0 0 1 720,20 V40" />
+    <path d="M720,40 V20 A20,20 0 0 1 760,20 V40" />
+    <path d="M760,40 V20 A20,20 0 0 1 800,20 V40" />
+    <path d="M800,40 V20 A20,20 0 0 1 840,20 V40" />
+    <path d="M840,40 V20 A20,20 0 0 1 880,20 V40" />
+    <path d="M880,40 V20 A20,20 0 0 1 920,20 V40" />
+    <path d="M920,40 V20 A20,20 0 0 1 960,20 V40" />
+    <path d="M960,40 V20 A20,20 0 0 1 1000,20 V40" />
+    <path d="M1000,40 V20 A20,20 0 0 1 1040,20 V40" />
+    <path d="M1040,40 V20 A20,20 0 0 1 1080,20 V40" />
+    <path d="M1080,40 V20 A20,20 0 0 1 1120,20 V40" />
+    <path d="M1120,40 V20 A20,20 0 0 1 1160,20 V40" />
+    <path d="M1160,40 V20 A20,20 0 0 1 1200,20 V40" />
+  </g>
+</svg>
+
+<section class="collections" id="collections">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">La sélection</div>
+      <h2>Trois façons de porter la côte</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-swatch swatch-photo">
+          <img src="tunisian-summer-vibe.png" alt="Tunisian Summer Vibe">
+          <span class="tag">01 — Whitewash</span>
+        </div>
+        <div class="card-body">
+          <h3>Sidi Bou</h3>
+          <p>Lin ample pour le village blanc et bleu.</p>
+          <a href="shop.html#sidi-bou">Voir les pièces →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-swatch swatch-photo">
+          <img src="tunisian-summer-vibe.png" alt="Tunisian Summer Vibe">
+          <span class="tag">02 — Harbor</span>
+        </div>
+        <div class="card-body">
+          <h3>La Marsa</h3>
+          <p>Coton plus épais pour le vent du large.</p>
+          <a href="shop.html#la-marsa">Voir les pièces →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-swatch swatch-photo">
+          <img src="tunisian-summer-vibe.png" alt="Tunisian Summer Vibe">
+          <span class="tag">03 — Foundation</span>
+        </div>
+        <div class="card-body">
+          <h3>Carthage</h3>
+          <p>Tee-shirts et basiques du quotidien.</p>
+          <a href="shop.html#carthage">Voir les pièces →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="heritage" id="heritage">
+  <div class="wrap heritage-grid">
+    <div>
+      <div class="eyebrow">D'où vient le nom</div>
+      <h2>Punica granatum</h2>
+      <p class="heritage-lede">Le nom latin de la grenade — cultivée sur cette côte bien avant les murs de Carthage.</p>
+    </div>
+    <div class="heritage-body">
+      <p>Nommée pour le fruit, pas l'empire. La Tunisie punique commerçait en teintures et tissus faits pour tenir une traversée — c'est encore notre exigence.</p>
+      <blockquote>« Une grenade paraît simple jusqu'à ce qu'on l'ouvre. C'est tout le brief. »</blockquote>
+      <p>Chaque pièce est développée et cousue en petites séries à Tunis, chez des ateliers avec qui nous travaillons depuis nos débuts.</p>
+      <ul class="seed-list">
+        <li><span class="seed-dot"></span> Séries limitées, 200 pièces maximum par modèle</li>
+        <li><span class="seed-dot"></span> Fibres naturelles uniquement — lin, coton, laine</li>
+        <li><span class="seed-dot"></span> Coupé et cousu à moins de 20 km de notre atelier à Tunis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="wrap newsletter-inner">
+    <h3>Les nouvelles collections, jamais plus d'une fois par mois.</h3>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="vous@email.com" required>
+      <button class="btn" type="submit">S'inscrire</button>
+    </form>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg class="logo-mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20.4" stroke="currentColor" stroke-width="1.3"/>
+            <g stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+              <line x1="22" y1="12.5" x2="22" y2="8.5"/>
+              <line x1="18.6" y1="13.2" x2="16.2" y2="9.6"/>
+              <line x1="25.4" y1="13.2" x2="27.8" y2="9.6"/>
+            </g>
+            <text x="22" y="31.5" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="19" fill="currentColor">P</text>
+          </svg>
+          <span class="logo-word" style="color:var(--sky)">PUNICA</span>
+        </div>
+        <p>Coupé à Tunis. Simple dehors, réfléchi dedans.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Boutique</h4>
+        <a href="shop.html#sidi-bou">Sidi Bou</a>
+        <a href="shop.html#la-marsa">La Marsa</a>
+        <a href="shop.html#carthage">Carthage</a>
+        <a href="shop.html">Tous les produits</a>
+      </div>
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <a href="#heritage">Notre héritage</a>
+        <a href="#">Matières</a>
+        <a href="#">Points de vente</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>hello@punica.tn</p>
+        <p>Tunis, Tunisie</p>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PUNICA. Tous droits réservés.</span>
+      <span>Fait sur la côte.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  });
+
+  const burger = document.getElementById('burger');
+  const navLinks = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    const open = navLinks.style.display === 'flex';
+    navLinks.style.display = open ? 'none' : 'flex';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '64px';
+    navLinks.style.left = '0';
+    navLinks.style.right = '0';
+    navLinks.style.background = 'var(--cream)';
+    navLinks.style.padding = '20px 32px';
+    navLinks.style.gap = '18px';
+    navLinks.style.borderBottom = '1px solid var(--line)';
+  });
+  const searchToggle = document.getElementById('searchToggle');
+  const searchForm = document.getElementById('searchForm');
+  searchToggle.addEventListener('click', () => {
+    searchForm.classList.toggle('open');
+    if (searchForm.classList.contains('open')) document.getElementById('searchInput').focus();
+  });
+  searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const q = document.getElementById('searchInput').value.trim();
+    if (q) window.location.href = 'shop.html?q=' + encodeURIComponent(q);
+  });
+</script>
+
+</body>
+</html>
