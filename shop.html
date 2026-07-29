@@ -170,18 +170,10 @@
           <a href="product.html?id=${p.id}" style="color:var(--navy);"><h3>${p.name}</h3></a>
           <p class="desc">${p.desc}</p>
           <p class="price">${p.price} DT</p>
-          <button class="btn add-btn" data-id="${p.id}">Ajouter au panier</button>
+          <a href="product.html?id=${p.id}" class="btn add-btn">Ajouter au panier</a>
         </div>
       </div>
     `).join('');
-
-    grid.querySelectorAll('.add-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        addToCart(btn.dataset.id, 'M');
-        btn.textContent = 'Ajouté ✓';
-        setTimeout(() => { btn.textContent = 'Ajouter au panier'; }, 1200);
-      });
-    });
   }
 
   filterBar.querySelectorAll('button').forEach(btn => {
