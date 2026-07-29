@@ -126,7 +126,13 @@
 
   .hero-visual{position:relative; aspect-ratio:1/1.05;}
   .hero-visual svg{width:100%; height:100%;}
-
+  .hero-image {
+    width: 130%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    border-radius: 15px; /* optional */
+}
   /* ---------- Arch divider (signature) ---------- */
   .arch-divider{width:100%; height:auto; display:block; color:var(--navy);}
   .arch-divider.flip{transform:rotate(180deg);}
@@ -239,7 +245,7 @@
   }
   .product-card:hover{transform:translateY(-5px); box-shadow:0 16px 32px rgba(0,49,82,0.08);}
   .product-media{
-    height:320px; position:relative; overflow:hidden;
+    height: 400px; position:relative; overflow:hidden;
     display:flex; align-items:center; justify-content:center;
   }
   .product-media img{width:100%; height:100%; object-fit:cover; object-position:top;}
